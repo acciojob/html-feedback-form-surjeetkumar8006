@@ -1,16 +1,78 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    form {
+      max-width: 500px;
+      padding: 20px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="url"],
+    input[type="color"],
+    input[type="range"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <form action="#" method="POST">
+    <h2>Feedback Form</h2>
+
+    <!-- Name -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" minlength="3" maxlength="50" required>
+
+    <!-- Portfolio -->
+    <label for="portfolio">Portfolio:</label>
+    <input type="url" id="portfolio" name="portfolio" required>
+
+    <!-- Favorite Color -->
+    <label for="favColor">Favorite Color:</label>
+    <input type="color" id="favColor" name="favColor" required>
+
+    <!-- Likeness -->
+    <label for="likeness">Likeness (1 to 100):</label>
+    <input type="range" id="likeness" name="likeness" min="1" max="100" required>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit Feedback">
+  </form>
 
 </body>
-
 </html>
